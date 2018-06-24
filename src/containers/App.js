@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import { Kitties } from '../components/Kitties';
 import SearchBar from '../components/SearchBar';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 class App extends Component {
     constructor() {
@@ -31,7 +32,9 @@ class App extends Component {
                 No? Well here is a clowder for you.</h4>
                 <SearchBar searchChange = { this.onSearchChange } />
                 <Scroll>
-                    <CardList Kitties = { filteredKitties } />
+                    <ErrorBoundary>
+                        <CardList Kitties = { filteredKitties } />
+                    </ErrorBoundary>
                 </Scroll>
             </div>
         );

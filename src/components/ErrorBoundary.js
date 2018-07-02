@@ -1,4 +1,4 @@
-import React, { Component } fromt 'react'; 
+import React, { Component } from 'react'; 
 
 class ErrorBoundary extends Component {
     constructor(props) {
